@@ -59,7 +59,7 @@ for page_num in range(1, 82):  # Looping through 80 pages
 
 # Convert to DataFrame and save to CSV
 df = pd.DataFrame(data)
-df.to_csv('ebay0.csv', index=False)
+df.to_csv('ebay.csv', index=False)
 
 # Close the WebDriver
 driver.quit()

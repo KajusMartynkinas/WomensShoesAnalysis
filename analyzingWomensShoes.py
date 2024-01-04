@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv
 
-ebay_df = pd.read_csv('ebay0.csv')
+ebay_df = pd.read_csv('ebay.csv')
 ali_df = pd.read_csv('aliExpress.csv')
 
 
