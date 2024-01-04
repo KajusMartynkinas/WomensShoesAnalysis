@@ -5,24 +5,21 @@ from selenium.webdriver.chrome.service import Service
 import time
 import re
 
-# Set up the WebDriver
-service = Service('C:/Users/Aero/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe')  # Replace with your ChromeDriver path
+service = Service('C:/Users/Aero/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe')
 driver = webdriver.Chrome(service=service)
 
 data = []
 
-for page_num in range(1, 82):  # Looping through 80 pages
+for page_num in range(1, 82):
     url = f'https://www.ebay.com/sch/3034/i.html?_from=R40&_nkw=womens+shoes&_ipg=60&_dmd=1&rt=nc&_pgn={page_num}'
     driver.get(url)
 
-    # Scroll down the page gradually
     total_scrolls = 11
-    scroll_pause_time = 1  # Pause time between scrolls, in seconds
+    scroll_pause_time = 1
     for i in range(total_scrolls):
         driver.execute_script("window.scrollBy(0, 1500);")
         time.sleep(scroll_pause_time)
 
-    # Use Selenium to get the page source after scrolling
     soup = BeautifulSoup(driver.page_source, 'html.parser')
 
     scrape_title = soup.find_all('div', class_='s-item__title')
@@ -43,13 +40,12 @@ for page_num in range(1, 82):  # Looping through 80 pages
         else:
             price_text = 'Price not found'
 
-        # Handle the 'sold' information
-        sold_index = scrape_title.index(title)  # Get the index of the current title
+        sold_index = scrape_title.index(title)
         if sold_index < len(scrape_sold):
             sold_text = int(scrape_sold[sold_index].get_text().strip().replace('+ sold', '').replace(',', '').replace(
                 ' sold', ''))
         else:
-            sold_text = '0'  # Default value if 'sold' data is not available
+            sold_text = '0'
 
         data.append({
             'title': title_text,
@@ -57,9 +53,7 @@ for page_num in range(1, 82):  # Looping through 80 pages
             'sold': sold_text
         })
 
-# Convert to DataFrame and save to CSV
 df = pd.DataFrame(data)
 df.to_csv('ebay.csv', index=False)
 
-# Close the WebDriver
 driver.quit()
