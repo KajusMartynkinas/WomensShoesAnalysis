@@ -6,13 +6,11 @@ import csv
 ebay_df = pd.read_csv('ebay0.csv')
 ali_df = pd.read_csv('aliExpress.csv')
 
-# print(ebay_df)
 
 while True:
     def show_1():
         average_price_ebay = ebay_df['price'].mean()
         average_price_ali = ali_df['price'].mean()
-
         plt.style.use('dark_background')
         plt.bar('eBay', average_price_ebay, color='lime')
         plt.bar('AliExpress', average_price_ali, color='magenta')
@@ -37,10 +35,8 @@ while True:
     def show_3():
         top15_ebay = ebay_df.nlargest(15, 'price')
         top15_ali = ali_df.nlargest(15, 'price')
-
         ebay_x = np.arange(len(top15_ebay))
         aliexpress_x = np.arange(len(top15_ali)) + len(top15_ebay)
-
         plt.style.use('dark_background')
         plt.figure(figsize=(10, 6))
         plt.scatter(ebay_x, top15_ebay['price'], color='lime', label='eBay')
@@ -57,10 +53,8 @@ while True:
     def show_4():
         top15_ebay = ebay_df.nsmallest(15, 'price')
         top15_ali = ali_df.nsmallest(15, 'price')
-
         ebay_x = np.arange(len(top15_ebay))
         aliexpress_x = np.arange(len(top15_ali)) + len(top15_ebay)
-
         plt.style.use('dark_background')
         plt.figure(figsize=(10, 6))
         plt.scatter(ebay_x, top15_ebay['price'], color='lime', label='eBay')
@@ -75,27 +69,13 @@ while True:
 
 
     def show_5():
-        # Add a 'platform' column
         ebay_df['platform'] = 'eBay'
         ali_df['platform'] = 'AliExpress'
-
-        # Combine the dataframes
         combined_df = pd.concat([ebay_df, ali_df])
-
-        # Assuming the price column is named 'price'
-        # Replace 'price' with the actual column name in your CSV files
-
-        # Create bins for price range - adjust these based on your dataset
         bins = [0, 20, 50, 100, 150, 200, 300, float('inf')]
         labels = ['0-20', '21-50', '51-100', '101-150', '151-200', '201-300', '300+']
-
-        # Bin the data
         combined_df['price_range'] = pd.cut(combined_df['price'], bins=bins, labels=labels)
-
-        # Count the number of products in each bin for each platform
         price_range_counts = combined_df.groupby(['platform', 'price_range']).size().unstack(fill_value=0)
-
-        # Plotting
         plt.style.use('dark_background')
         price_range_counts.T.plot(kind='bar', figsize=(12, 10), color=['magenta', 'lime'])
         plt.xlabel('Price Range')
