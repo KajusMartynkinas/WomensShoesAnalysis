@@ -28,7 +28,7 @@ while True:
         plt.bar('AliExpress', sold_ali, color='magenta')
         plt.xlabel('Platform')
         plt.ylabel('Amount Sold')
-        plt.title('The Sum of Sales for Each Platform')
+        plt.title('Amount of Sales from Each Platform')
         plt.show()
 
 

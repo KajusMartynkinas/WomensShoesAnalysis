@@ -31,5 +31,42 @@ Replace `<script_name>` with the name of the script you want to run.
 - **eBay Data Analysis (`ebay.py`)**: Similar to `aliExpress.py`, this script is dedicated to analyzing data from `ebay.csv`, offering insights into the pricing and product range on eBay.
 - **Comparative Analysis (`analyzingWomensShoes.py`)**: This script brings together data from both platforms, providing a comparative analysis of price trends, popular price ranges, and other significant metrics.
 
-## Contributing
-Contributions to this project are welcome. Feel free to fork the repository and submit pull requests.
+## Data Analysis Insights
+
+This project was made with 5 tasks in mind:
+
+### Task 1: Average price Comparison Between eBay and AliExpress
+The goal of this task was to see which platform had the cheapest products on average.
+As we can see AliExpress has much cheaper products.
+
+![Average price Comparison Between eBay and AliExpress](results/task1.png)
+
+
+### Task 2: Amount of Sales from Each Platform
+Since AliExpress had cheaper products, the goal of this task was to compare the sales of each platform.
+As we can see AliExpress has a lot more sales. 
+It should also be noted that the data might not be entirely accurate since the majority of products on eBay did not have information about sales.
+
+![Amount of Sales from Each Platform](results/task2.png)
+
+
+### Task 3: Top 15 Most Expensive Products on eBay and AliExpress
+The goal of this task was to check which platform had the most expensive products.
+As we can see eBay had the more expensive womens shoes.
+
+![Top 15 Most Expensive Products on eBay and AliExpress](results/task3.png)
+
+
+### Task 4: Top 15 Cheapest Products on eBay and AliExpress
+Since we knew which platform had the most expensive products, the goal of the following task
+was to chech which platform had the cheapest products.
+As we can see it is AliExpress.
+
+![Top 15 Cheapest Products on eBay and AliExpress](results/task4.png)
+
+### Task 5: Product Counts in Price Ranges for eBay and AliExpress
+The goal of this task was to see which price range is most popular in these platforms.
+As we can see the price range that is most popular in AliExpress is 0-20 Eur
+and in eBay: 21-50 Eur.
+
+![Product Counts in Price Ranges for eBay and AliExpress](results/task5.png)
