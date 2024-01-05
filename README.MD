@@ -1,72 +1,61 @@
-# Analyzing Womens Shoes from AliExpress and eBay
+# Analyzing Women's Shoes from AliExpress and eBay
 
 ## Introduction
-This project involves analyzing women's shoe data from two different online platforms: eBay and AliExpress. The analysis is aimed at understanding the pricing strategies and popular price ranges of women's shoes on these platforms. The project is divided into three main Python scripts, each handling a different aspect of the data analysis.
+This analytical study delves into the diverse landscape of women's footwear across two major e-commerce platforms, eBay and AliExpress. Focused on unraveling the intricacies of pricing strategies and discerning the prevalent price ranges, the project is meticulously sectioned into three specialized Python scripts, each dedicated to a unique facet of this comprehensive data exploration.
 
 ## Files Description
-- `aliExpress.py`: Python script for processing and analyzing data from the AliExpress platform.
-- `ebay.py`: Python script for processing and analyzing data from the eBay platform.
-- `analyzingWomensShoes.py`: Main Python script that integrates data from both platforms to provide comprehensive insights.
-- `aliExpress.csv`: Contains the dataset from the AliExpress platform.
-- `ebay.csv`: Contains the dataset from the eBay platform.
-- `requirements.txt`: Lists all the Python dependencies required for the project.
-
-## Installation
-To run this project, Python 3.x is required. To install the necessary dependencies, run the following command in your terminal:
-pip install -r requirements.txt
-
-## Usage
-Run the scripts in the following order to perform a complete analysis:
-1. `aliExpress.py`
-2. `ebay.py`
-3. `analyzingWomensShoes.py`
-
-Each script can be executed with the following command:
-python <script_name>.py
-
-Replace `<script_name>` with the name of the script you want to run.
+- `aliExpress.py`: A Python script tailored for in-depth analysis of the AliExpress dataset, offering insights into pricing and product attributes.
+- `ebay.py`: This script mirrors the analytical approach of `aliExpress.py` but focuses on the eBay dataset, revealing critical aspects of pricing and product assortment.
+- `analyzingWomensShoes.py`: Serving as the integrative core, this script amalgamates data from both platforms, providing a holistic view of pricing trends, popular price brackets, and key comparative insights.
+- `aliExpress.csv` & `ebay.csv`: These datasets encapsulate the extensive array of women's shoes available on AliExpress and eBay, respectively.
+- `requirements.txt`: Enumerates all the Python dependencies vital for executing the project scripts seamlessly.
 
 ## Data Analysis Overview
-- **AliExpress Data Analysis (`aliExpress.py`)**: This script processes the `aliExpress.csv` file, focusing on the analysis of product prices and other relevant attributes from the AliExpress platform.
-- **eBay Data Analysis (`ebay.py`)**: Similar to `aliExpress.py`, this script is dedicated to analyzing data from `ebay.csv`, offering insights into the pricing and product range on eBay.
-- **Comparative Analysis (`analyzingWomensShoes.py`)**: This script brings together data from both platforms, providing a comparative analysis of price trends, popular price ranges, and other significant metrics.
+- **AliExpress Data Analysis**: Digs into the `aliExpress.csv`, dissecting product prices and other pivotal attributes.
+- **eBay Data Analysis**: Echoes the AliExpress analysis but with a focus on the `ebay.csv` data, offering insights into eBay's market dynamics.
+- **Comparative Analysis**: A dual-platform analysis, scrutinizing price trends and popular price ranges, painting a comprehensive picture of the market landscape.
 
 ## Data Analysis Insights
 
-This project was made with 5 tasks in mind:
+This project unfolds through five meticulously designed tasks:
 
-### Task 1: Average price Comparison Between eBay and AliExpress
-The goal of this task was to see which platform had the cheapest products on average.
-As we can see AliExpress has much cheaper products.
+### Task 1: Average Price Comparison Between eBay and AliExpress
+Objective: Determine which platform offers more cost-effective products on average.
 
-![Average price Comparison Between eBay and AliExpress](results/task1.png)
+Insight: AliExpress emerges as the more affordable marketplace.
 
+![Average Price Comparison Between eBay and AliExpress](results/task1.png)
 
-### Task 2: Amount of Sales from Each Platform
-Since AliExpress had cheaper products, the goal of this task was to compare the sales of each platform.
-As we can see AliExpress has a lot more sales. 
-It should also be noted that the data might not be entirely accurate since the majority of products on eBay did not have information about sales.
+### Task 2: Sales Volume Comparison Across Platforms
+Objective: Assess sales volume in light of AliExpress's lower price points.
 
-![Amount of Sales from Each Platform](results/task2.png)
+Insight: AliExpress demonstrates a higher sales volume, though data limitations on eBay's sales figures are noted.
 
+![Sales Volume Comparison Across Platforms](results/task2.png)
 
-### Task 3: Top 15 Most Expensive Products on eBay and AliExpress
-The goal of this task was to check which platform had the most expensive products.
-As we can see eBay had the more expensive womens shoes.
+### Task 3: Top 15 Priciest Products on eBay and AliExpress
+Objective: Identify the platform with the most premium-priced women's shoes.
 
-![Top 15 Most Expensive Products on eBay and AliExpress](results/task3.png)
+Insight: eBay predominates in the high-end price segment.
 
+![Top 15 Priciest Products on eBay and AliExpress](results/task3.png)
 
-### Task 4: Top 15 Cheapest Products on eBay and AliExpress
-Since we knew which platform had the most expensive products, the goal of the following task
-was to chech which platform had the cheapest products.
-As we can see it is AliExpress.
+### Task 4: Top 15 Most Affordable Products on eBay and AliExpress
+Objective: Discover which platform offers the most budget-friendly options.
 
-![Top 15 Cheapest Products on eBay and AliExpress](results/task4.png)
+Insight: AliExpress consistently offers more economical choices.
 
-### Task 5: Product Counts in Price Ranges for eBay and AliExpress
-The goal of this task was to see which price range is most popular in these platforms.
-As we can see the price range that is most popular in AliExpress is 0-20 Eur
-and in eBay: 21-50 Eur.
+![Top 15 Most Affordable Products on eBay and AliExpress](results/task4.png)
 
-![Product Counts in Price Ranges for eBay and AliExpress](results/task5.png)
+### Task 5: Popular Price Ranges on eBay and AliExpress
+Objective: Uncover the most frequented price range on each platform.
+
+Insight: The 0-20 EUR range dominates on AliExpress, while eBay's popular bracket is 21-50 EUR.
+
+![Popular Price Ranges on eBay and AliExpress](results/task5.png)
+
+## Conclusion
+This study presents a nuanced understanding of the women's shoe market across two major online platforms. 
+Through a series of targeted analyses, it sheds light on key market trends, pricing strategies, and consumer preferences. 
+As e-commerce continues to evolve, such insights become invaluable for consumers and marketers alike, 
+offering a window into the competitive landscape and evolving consumer behavior in the digital retail space.
